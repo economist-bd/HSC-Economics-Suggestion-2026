@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="bn">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSC Economics Suggestion 2026</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap');
+        
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .app-container {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1729 100%);
+            font-family: 'Hind Siliguri', sans-serif;
+            color: #e0e6ed;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3% 4%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 4%;
+            padding: 3% 2%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .main-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1%;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(167, 139, 250, 0.8)); }
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            color: #94a3b8;
+            margin-bottom: 1%;
+            font-weight: 500;
+        }
+        
+        .board-badge {
+            display: inline-block;
+            padding: 1% 3%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 1%;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .navigation-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3%;
+            margin-bottom: 4%;
+        }
+        
+        .paper-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border-radius: 20px;
+            padding: 3%;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .paper-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .paper-card:hover {
+            border-color: #6366f1;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        .paper-card:hover::before {
+            opacity: 1;
+        }
+        
+        .paper-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .paper-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 3%;
+            color: #e0e6ed;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chapter-list {
+            list-style: none;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chapter-item {
+            padding: 2% 3%;
+            margin-bottom: 2%;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 10px;
+            border-left: 3px solid #6366f1;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .chapter-item:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateX(5px);
+            border-left-color: #a78bfa;
+        }
+        
+        .chapter-number {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            color: #60a5fa;
+            min-width: 30px;
+        }
+        
+        .chapter-name {
+            flex: 1;
+            font-size: 1em;
+            color: #cbd5e1;
+        }
+        
+        .importance-badge {
+            padding: 1% 2%;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .super-important {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .very-important {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+        }
+        
+        .important {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .content-section {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border-radius: 20px;
+            padding: 3%;
+            margin-bottom: 3%;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3%;
+            padding-bottom: 2%;
+            border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .back-button {
+            padding: 2% 4%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .chapter-content {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 15px;
+            padding: 3%;
+            margin-bottom: 3%;
+        }
+        
+        .chapter-content h3 {
+            font-size: 1.5em;
+            color: #60a5fa;
+            margin-bottom: 2%;
+            font-weight: 600;
+        }
+        
+        .topic-list {
+            list-style: none;
+            margin-bottom: 3%;
+        }
+        
+        .topic-item {
+            padding: 2%;
+            margin-bottom: 1.5%;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            border-left: 2px solid #8b5cf6;
+            font-size: 1em;
+            color: #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        
+        .topic-item:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateX(3px);
+        }
+        
+        .question-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-radius: 12px;
+            padding: 3%;
+            margin-top: 3%;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .question-title {
+            font-size: 1.2em;
+            color: #60a5fa;
+            margin-bottom: 2%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .question-text {
+            padding: 1.5%;
+            margin-bottom: 1%;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+        
+        .stimulus-box {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            border-radius: 12px;
+            padding: 3%;
+            margin-top: 3%;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        
+        .stimulus-title {
+            font-size: 1.2em;
+            color: #a78bfa;
+            margin-bottom: 2%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .stimulus-content {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 10px;
+            padding: 3%;
+        }
+        
+        .stimulus-text {
+            padding: 2%;
+            margin-bottom: 2%;
+            background: rgba(168, 85, 247, 0.1);
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #e0e6ed;
+            line-height: 1.8;
+            border-left: 3px solid #a78bfa;
+        }
+        
+        .tips-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            border-radius: 15px;
+            padding: 3%;
+            margin-top: 3%;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .tips-title {
+            font-size: 1.3em;
+            color: #10b981;
+            margin-bottom: 2%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .tips-list {
+            list-style: none;
+        }
+        
+        .tip-item {
+            padding: 2%;
+            margin-bottom: 1.5%;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #cbd5e1;
+            display: flex;
+            align-items: flex-start;
+            gap: 2%;
+        }
+        
+        .tip-icon {
+            color: #10b981;
+            font-weight: 700;
+            min-width: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .navigation-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .paper-number {
+                font-size: 2em;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: 2%;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="app-container">
+   <div class="stars" id="stars"></div>
+   <div class="content-wrapper">
+    <div class="header">
+     <h1 class="main-title" id="mainTitle">HSC অর্থনীতি সাজেশন</h1>
+     <p class="subtitle" id="subtitle">২০২৬ পরীক্ষার্থীদের জন্য বিশেষ প্রস্তুতি</p><span class="board-badge" id="boardName">ঢাকা বোর্ড</span>
+    </div>
+    <div id="navigationView" class="navigation-container">
+     <div class="paper-card" onclick="showPaper('paper1')">
+      <div class="paper-number">
+       ০১
+      </div>
+      <h2 class="paper-title" id="paperOneTitle">অর্থনীতি ১ম পত্র</h2>
+      <ul class="chapter-list">
+       <li class="chapter-item"><span class="chapter-number">০১</span> <span class="chapter-name">অর্থনীতি পরিচয়</span> <span class="importance-badge very-important">গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০২</span> <span class="chapter-name">ভোক্তা ও উৎপাদক তত্ত্ব</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৩</span> <span class="chapter-name">উৎপাদন ব্যয় ও আয়</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৪</span> <span class="chapter-name">বাজার</span> <span class="importance-badge very-important">গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৫</span> <span class="chapter-name">উৎপাদনের উপকরণ ও মূল্য নির্ধারণ</span> <span class="importance-badge important">পড়তে হবে</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৬</span> <span class="chapter-name">মূলধন ও সুদ</span> <span class="importance-badge important">পড়তে হবে</span></li>
+      </ul>
+     </div>
+     <div class="paper-card" onclick="showPaper('paper2')">
+      <div class="paper-number">
+       ০২
+      </div>
+      <h2 class="paper-title" id="paperTwoTitle">অর্থনীতি ২য় পত্র</h2>
+      <ul class="chapter-list">
+       <li class="chapter-item"><span class="chapter-number">০১</span> <span class="chapter-name">সামষ্টিক অর্থনীতি পরিচয়</span> <span class="importance-badge very-important">গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০২</span> <span class="chapter-name">জাতীয় আয়</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৩</span> <span class="chapter-name">মুদ্রা ও ব্যাংকিং</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৪</span> <span class="chapter-name">সরকারি অর্থব্যবস্থা</span> <span class="importance-badge very-important">গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৫</span> <span class="chapter-name">আন্তর্জাতিক বাণিজ্য</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৬</span> <span class="chapter-name">উন্নয়ন অর্থনীতি</span> <span class="importance-badge important">পড়তে হবে</span></li>
+      </ul>
+     </div>
+    </div>
+    <div id="paper1Content" class="content-section">
+     <div class="section-header">
+      <h2 class="section-title">অর্থনীতি ১ম পত্র - বিস্তারিত সাজেশন</h2><button class="back-button" onclick="showNavigation()">← ফিরে যান</button>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ১: অর্থনীতি পরিচয়</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ অর্থনীতির সংজ্ঞা ও পরিধি</li>
+       <li class="topic-item">✦ অর্থনীতির মৌলিক সমস্যা</li>
+       <li class="topic-item">✦ অর্থনৈতিক ব্যবস্থা (পুঁজিবাদী, সমাজতান্ত্রিক, মিশ্র)</li>
+       <li class="topic-item">✦ চাহিদা ও যোগানের ধারণা</li>
+       <li class="topic-item">✦ উৎপাদন সম্ভাবনা রেখা (PPC)</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. অর্থনীতি কী?</p>
+       <p class="question-text">২. অভাব কাকে বলে?</p>
+       <p class="question-text">৩. উৎপাদন সম্ভাবনা রেখা কী?</p>
+       <p class="question-text">৪. পুঁজিবাদী অর্থব্যবস্থা কী?</p>
+       <p class="question-text">৫. সুযোগ ব্যয় কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> রহিম একজন কৃষক। তার ১০ একর জমি আছে। তিনি ভাবছেন পুরো জমিতে ধান চাষ করবেন নাকি কিছু জমিতে সবজি চাষ করবেন। ধান চাষে লাভ কম কিন্তু নিশ্চিত, আর সবজি চাষে লাভ বেশি কিন্তু ঝুঁকি আছে।</p>
+        <p class="question-text"><strong>ক)</strong> সুযোগ ব্যয় কী?</p>
+        <p class="question-text"><strong>খ)</strong> "অভাব অসীম কিন্তু সম্পদ সীমিত" - ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে রহিমের সিদ্ধান্ত গ্রহণে কোন অর্থনৈতিক সমস্যা প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উৎপাদন সম্ভাবনা রেখার সাহায্যে রহিমের সিদ্ধান্ত বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ২: ভোক্তা ও উৎপাদক তত্ত্ব ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ উপযোগ ও উপযোগের প্রকারভেদ</li>
+       <li class="topic-item">✦ প্রান্তিক উপযোগ হ্রাস বিধি</li>
+       <li class="topic-item">✦ ভোক্তার ভারসাম্য (সমান প্রান্তিক উপযোগ বিধি)</li>
+       <li class="topic-item">✦ চাহিদা রেখা ও চাহিদার স্থিতিস্থাপকতা</li>
+       <li class="topic-item">✦ উদাসীনতা রেখা বিশ্লেষণ</li>
+       <li class="topic-item">✦ বাজেট রেখা ও ভোক্তার ভারসাম্য</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. উপযোগ কী?</p>
+       <p class="question-text">২. প্রান্তিক উপযোগ কাকে বলে?</p>
+       <p class="question-text">৩. চাহিদার স্থিতিস্থাপকতা কী?</p>
+       <p class="question-text">৪. উদাসীনতা রেখা কী?</p>
+       <p class="question-text">৫. ভোক্তার ভারসাম্য কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> করিম প্রতিদিন বাজার থেকে আম কিনে খায়। প্রথম আমটি খেয়ে সে অনেক তৃপ্তি পায়। দ্বিতীয় আমটি খেয়ে কিছুটা কম তৃপ্তি পায়। তৃতীয় আমটি খেয়ে আরও কম তৃপ্তি পায়। চতুর্থ আমটি খেতে তার আর ভালো লাগে না।</p>
+        <p class="question-text"><strong>ক)</strong> মোট উপযোগ কী?</p>
+        <p class="question-text"><strong>খ)</strong> চাহিদার স্থিতিস্থাপকতা বলতে কী বোঝায়?</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন অর্থনৈতিক বিধি প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের আলোকে প্রান্তিক উপযোগ হ্রাস বিধির যৌক্তিকতা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৩: উৎপাদন ব্যয় ও আয় ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ উৎপাদন ফাংশন</li>
+       <li class="topic-item">✦ মোট, গড় ও প্রান্তিক উৎপাদন</li>
+       <li class="topic-item">✦ উৎপাদনের বিধি (ক্রমহ্রাসমান প্রান্তিক উৎপাদন বিধি)</li>
+       <li class="topic-item">✦ উৎপাদন ব্যয়ের ধারণা (স্থির ও পরিবর্তনশীল ব্যয়)</li>
+       <li class="topic-item">✦ মোট, গড় ও প্রান্তিক ব্যয়</li>
+       <li class="topic-item">✦ মোট, গড় ও প্রান্তিক আয়</li>
+       <li class="topic-item">✦ উৎপাদকের ভারসাম্য</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. উৎপাদন ফাংশন কী?</p>
+       <p class="question-text">২. প্রান্তিক উৎপাদন কাকে বলে?</p>
+       <p class="question-text">৩. স্থির ব্যয় কী?</p>
+       <p class="question-text">৪. প্রান্তিক আয় কী?</p>
+       <p class="question-text">৫. উৎপাদকের ভারসাম্য কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি কারখানায় ১ জন শ্রমিক নিয়োগ দিলে ১০টি পণ্য উৎপাদন হয়। ২ জন শ্রমিক নিয়োগ দিলে ২৫টি পণ্য উৎপাদন হয়। ৩ জন শ্রমিক নিয়োগ দিলে ৩৫টি পণ্য উৎপাদন হয়। ৪ জন শ্রমিক নিয়োগ দিলে ৪০টি পণ্য উৎপাদন হয়।</p>
+        <p class="question-text"><strong>ক)</strong> মোট উৎপাদন কী?</p>
+        <p class="question-text"><strong>খ)</strong> স্থির ব্যয় ও পরিবর্তনশীল ব্যয়ের পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে প্রতিটি শ্রমিকের প্রান্তিক উৎপাদন নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে কোন অর্থনৈতিক বিধি কার্যকর রয়েছে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৪: বাজার</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ বাজারের ধারণা ও শ্রেণিবিভাগ</li>
+       <li class="topic-item">✦ পূর্ণ প্রতিযোগিতামূলক বাজার</li>
+       <li class="topic-item">✦ একচেটিয়া বাজার</li>
+       <li class="topic-item">✦ একচেটিয়া প্রতিযোগিতা</li>
+       <li class="topic-item">✦ অলিগোপলি বাজার</li>
+       <li class="topic-item">✦ বিভিন্ন বাজারে মূল্য ও উৎপাদন নির্ধারণ</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. বাজার কী?</p>
+       <p class="question-text">২. পূর্ণ প্রতিযোগিতা কী?</p>
+       <p class="question-text">৩. একচেটিয়া বাজার কাকে বলে?</p>
+       <p class="question-text">৪. অলিগোপলি কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> 'ক' এলাকায় অনেক কৃষক একই ধরনের ধান উৎপাদন করে এবং বাজারে বিক্রি করে। কোনো কৃষকই দাম নির্ধারণ করতে পারে না। অন্যদিকে 'খ' এলাকায় শুধুমাত্র একটি কোম্পানি বিদ্যুৎ সরবরাহ করে এবং তারাই দাম নির্ধারণ করে।</p>
+        <p class="question-text"><strong>ক)</strong> একচেটিয়া প্রতিযোগিতা কী?</p>
+        <p class="question-text"><strong>খ)</strong> পূর্ণ প্রতিযোগিতামূলক বাজারের বৈশিষ্ট্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> 'ক' এলাকার বাজার কোন ধরনের? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> 'ক' ও 'খ' এলাকার বাজার ব্যবস্থার তুলনামূলক বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="tips-section">
+      <h3 class="tips-title">📚 পরীক্ষার জন্য বিশেষ টিপস</h3>
+      <ul class="tips-list">
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>অধ্যায় ২ ও ৩ থেকে প্রতি বছর নিশ্চিত ২-৩টি প্রশ্ন আসে - এগুলো খুব ভালোভাবে পড়ুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>গাণিতিক সমস্যাগুলো (চাহিদা স্থিতিস্থাপকতা, ভারসাম্য) বারবার অনুশীলন করুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>রেখাচিত্র আঁকার অনুশীলন করুন - উদাসীনতা রেখা, চাহিদা-যোগান রেখা</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>সংজ্ঞা ও পার্থক্যগুলো ছোট নোট করে রাখুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>বিগত বছরের বোর্ড প্রশ্ন সমাধান করুন (২০২০-২০২৫)</span></li>
+      </ul>
+     </div>
+    </div>
+    <div id="paper2Content" class="content-section">
+     <div class="section-header">
+      <h2 class="section-title">অর্থনীতি ২য় পত্র - বিস্তারিত সাজেশন</h2><button class="back-button" onclick="showNavigation()">← ফিরে যান</button>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ১: সামষ্টিক অর্থনীতি পরিচয়</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ সামষ্টিক অর্থনীতির ধারণা</li>
+       <li class="topic-item">✦ ব্যষ্টিক ও সামষ্টিক অর্থনীতির পার্থক্য</li>
+       <li class="topic-item">✦ সামষ্টিক অর্থনীতির গুরুত্ব</li>
+       <li class="topic-item">✦ সামষ্টিক অর্থনৈতিক লক্ষ্য</li>
+       <li class="topic-item">✦ অর্থনৈতিক প্রবৃদ্ধি ও উন্নয়ন</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. সামষ্টিক অর্থনীতি কী?</p>
+       <p class="question-text">২. ব্যষ্টিক অর্থনীতি কী?</p>
+       <p class="question-text">৩. অর্থনৈতিক প্রবৃদ্ধি কী?</p>
+       <p class="question-text">৪. মুদ্রাস্ফীতি কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> অর্থনীতিবিদ জনাব আলম একটি গবেষণায় দেখলেন যে, দেশের মোট জাতীয় উৎপাদন, বেকারত্বের হার, মুদ্রাস্ফীতি এবং সামগ্রিক অর্থনৈতিক প্রবৃদ্ধি নিয়ে কাজ করছেন। অন্যদিকে তার সহকর্মী জনাব করিম একটি নির্দিষ্ট পণ্যের দাম ও ভোক্তার ক্রয় আচরণ নিয়ে গবেষণা করছেন।</p>
+        <p class="question-text"><strong>ক)</strong> বেকারত্ব কী?</p>
+        <p class="question-text"><strong>খ)</strong> ব্যষ্টিক ও সামষ্টিক অর্থনীতির পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> জনাব আলমের গবেষণা অর্থনীতির কোন শাখার অন্তর্ভুক্ত? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে উল্লিখিত দুই ধরনের গবেষণার তুলনামূলক গুরুত্ব বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ২: জাতীয় আয় ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ জাতীয় আয়ের ধারণা ও সংজ্ঞা</li>
+       <li class="topic-item">✦ জাতীয় আয় পরিমাপের পদ্ধতি (উৎপাদন, আয়, ব্যয়)</li>
+       <li class="topic-item">✦ GDP, GNP, NNP, NI এর পার্থক্য</li>
+       <li class="topic-item">✦ মাথাপিছু আয়</li>
+       <li class="topic-item">✦ জাতীয় আয় নির্ধারণের তত্ত্ব</li>
+       <li class="topic-item">✦ গুণক তত্ত্ব (Multiplier)</li>
+       <li class="topic-item">✦ ত্বরক তত্ত্ব (Accelerator)</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. জাতীয় আয় কী?</p>
+       <p class="question-text">২. GDP কী?</p>
+       <p class="question-text">৩. GNP কী?</p>
+       <p class="question-text">৪. মাথাপিছু আয় কী?</p>
+       <p class="question-text">৫. গুণক কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> ২০২৫ সালে বাংলাদেশের মোট দেশজ উৎপাদন (GDP) ছিল ৪৫০ বিলিয়ন ডলার। বিদেশ থেকে নিট আয় ছিল ২০ বিলিয়ন ডলার। মূলধনের অবচয় ছিল ৩০ বিলিয়ন ডলার। জনসংখ্যা ছিল ১৭০ মিলিয়ন।</p>
+        <p class="question-text"><strong>ক)</strong> NNP কী?</p>
+        <p class="question-text"><strong>খ)</strong> GDP ও GNP এর পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে বাংলাদেশের GNP নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের তথ্যের ভিত্তিতে বাংলাদেশের মাথাপিছু আয় নির্ণয় করো এবং এর অর্থনৈতিক তাৎপর্য বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৩: মুদ্রা ও ব্যাংকিং ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ মুদ্রার সংজ্ঞা ও কার্যাবলি</li>
+       <li class="topic-item">✦ মুদ্রার প্রকারভেদ</li>
+       <li class="topic-item">✦ মুদ্রার যোগান ও চাহিদা</li>
+       <li class="topic-item">✦ মুদ্রার পরিমাণ তত্ত্ব (ফিশারের সমীকরণ)</li>
+       <li class="topic-item">✦ মুদ্রাস্ফীতি ও মুদ্রাসংকোচন</li>
+       <li class="topic-item">✦ ব্যাংকের ধারণা ও কার্যাবলি</li>
+       <li class="topic-item">✦ কেন্দ্রীয় ব্যাংক ও বাণিজ্যিক ব্যাংক</li>
+       <li class="topic-item">✦ ঋণ সৃষ্টি প্রক্রিয়া</li>
+       <li class="topic-item">✦ বাংলাদেশ ব্যাংকের ভূমিকা</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. মুদ্রা কী?</p>
+       <p class="question-text">২. মুদ্রাস্ফীতি কী?</p>
+       <p class="question-text">৩. কেন্দ্রীয় ব্যাংক কী?</p>
+       <p class="question-text">৪. ঋণ সৃষ্টি কী?</p>
+       <p class="question-text">৫. নগদ সংরক্ষণ অনুপাত কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> গত বছর একটি দেশে পণ্যের দাম ছিল ১০০ টাকা। এ বছর একই পণ্যের দাম হয়েছে ১১০ টাকা। মানুষের আয় বাড়েনি কিন্তু সব কিছুর দাম বেড়ে গেছে। কেন্দ্রীয় ব্যাংক এই পরিস্থিতি নিয়ন্ত্রণের জন্য ব্যাংক হার বৃদ্ধি করেছে এবং নগদ সংরক্ষণ অনুপাত বাড়িয়েছে।</p>
+        <p class="question-text"><strong>ক)</strong> ব্যাংক হার কী?</p>
+        <p class="question-text"><strong>খ)</strong> মুদ্রাস্ফীতির কারণ ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন অর্থনৈতিক সমস্যা প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে কেন্দ্রীয় ব্যাংকের গৃহীত পদক্ষেপের কার্যকারিতা মূল্যায়ন করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৪: সরকারি অর্থব্যবস্থা</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ সরকারি অর্থব্যবস্থার ধারণা</li>
+       <li class="topic-item">✦ সরকারি আয়ের উৎস</li>
+       <li class="topic-item">✦ সরকারি ব্যয়ের খাত</li>
+       <li class="topic-item">✦ বাজেট ও বাজেটের প্রকারভেদ</li>
+       <li class="topic-item">✦ কর ও করের প্রকারভেদ</li>
+       <li class="topic-item">✦ প্রত্যক্ষ ও পরোক্ষ কর</li>
+       <li class="topic-item">✦ সুষম ও ঘাটতি বাজেট</li>
+       <li class="topic-item">✦ রাজস্ব নীতি ও মুদ্রানীতি</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. বাজেট কী?</p>
+       <p class="question-text">২. কর কী?</p>
+       <p class="question-text">৩. প্রত্যক্ষ কর কী?</p>
+       <p class="question-text">৪. ঘাটতি বাজেট কী?</p>
+       <p class="question-text">৫. রাজস্ব নীতি কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> ২০২৫-২৬ অর্থবছরে বাংলাদেশ সরকারের মোট আয়ের লক্ষ্যমাত্রা ৫ লক্ষ কোটি টাকা এবং মোট ব্যয়ের লক্ষ্যমাত্রা ৭ লক্ষ কোটি টাকা। সরকার আয়কর, ভ্যাট এবং শুল্ক থেকে আয় করে। ব্যয় হয় শিক্ষা, স্বাস্থ্য, অবকাঠামো উন্নয়ন ইত্যাদি খাতে।</p>
+        <p class="question-text"><strong>ক)</strong> ভ্যাট কী?</p>
+        <p class="question-text"><strong>খ)</strong> প্রত্যক্ষ ও পরোক্ষ করের পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন ধরনের বাজেট প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের বাজেটের ঘাটতি পূরণের উপায় বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৫: আন্তর্জাতিক বাণিজ্য ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ আন্তর্জাতিক বাণিজ্যের ধারণা</li>
+       <li class="topic-item">✦ আন্তর্জাতিক বাণিজ্যের সুবিধা ও অসুবিধা</li>
+       <li class="topic-item">✦ তুলনামূলক সুবিধা তত্ত্ব (রিকার্ডো)</li>
+       <li class="topic-item">✦ বাণিজ্য শর্ত (Terms of Trade)</li>
+       <li class="topic-item">✦ বৈদেশিক বিনিময় হার</li>
+       <li class="topic-item">✦ আমদানি ও রপ্তানি</li>
+       <li class="topic-item">✦ বাণিজ্য ভারসাম্য ও লেনদেন ভারসাম্য</li>
+       <li class="topic-item">✦ WTO, IMF, World Bank এর ভূমিকা</li>
+       <li class="topic-item">✦ বাংলাদেশের বৈদেশিক বাণিজ্য</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. আন্তর্জাতিক বাণিজ্য কী?</p>
+       <p class="question-text">২. তুলনামূলক সুবিধা কী?</p>
+       <p class="question-text">৩. বৈদেশিক বিনিময় হার কী?</p>
+       <p class="question-text">৪. বাণিজ্য ভারসাম্য কী?</p>
+       <p class="question-text">৫. WTO কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> 'ক' দেশ কাপড় উৎপাদনে দক্ষ এবং 'খ' দেশ চাল উৎপাদনে দক্ষ। 'ক' দেশ ১ একক শ্রম দিয়ে ১০ মিটার কাপড় বা ৫ কেজি চাল উৎপাদন করতে পারে। 'খ' দেশ ১ একক শ্রম দিয়ে ৫ মিটার কাপড় বা ১০ কেজি চাল উৎপাদন করতে পারে। দুই দেশ পরস্পরের সাথে বাণিজ্য করার সিদ্ধান্ত নিয়েছে।</p>
+        <p class="question-text"><strong>ক)</strong> রপ্তানি কী?</p>
+        <p class="question-text"><strong>খ)</strong> আন্তর্জাতিক বাণিজ্যের সুবিধা লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন দেশের কোন পণ্যে তুলনামূলক সুবিধা আছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের আলোকে তুলনামূলক সুবিধা তত্ত্বের যৌক্তিকতা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৬: উন্নয়ন অর্থনীতি</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ অর্থনৈতিক উন্নয়নের ধারণা</li>
+       <li class="topic-item">✦ উন্নত ও অনুন্নত দেশের বৈশিষ্ট্য</li>
+       <li class="topic-item">✦ অর্থনৈতিক উন্নয়নের প্রতিবন্ধকতা</li>
+       <li class="topic-item">✦ দারিদ্র্য ও বেকারত্ব</li>
+       <li class="topic-item">✦ জনসংখ্যা ও অর্থনৈতিক উন্নয়ন</li>
+       <li class="topic-item">✦ টেকসই উন্নয়ন</li>
+       <li class="topic-item">✦ বাংলাদেশের অর্থনৈতিক উন্নয়ন</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. অর্থনৈতিক উন্নয়ন কী?</p>
+       <p class="question-text">২. দারিদ্র্য কী?</p>
+       <p class="question-text">৩. টেকসই উন্নয়ন কী?</p>
+       <p class="question-text">৪. মানব উন্নয়ন সূচক কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> বাংলাদেশের মাথাপিছু আয় বৃদ্ধি পাচ্ছে, কিন্তু এখনও অনেক মানুষ দারিদ্র্যসীমার নিচে বাস করছে। শিক্ষার হার বাড়ছে কিন্তু বেকারত্বও বাড়ছে। সরকার টেকসই উন্নয়ন লক্ষ্য (SDG) অর্জনের জন্য কাজ করছে।</p>
+        <p class="question-text"><strong>ক)</strong> বেকারত্ব কী?</p>
+        <p class="question-text"><strong>খ)</strong> উন্নত ও অনুন্নত দেশের পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে বাংলাদেশের অর্থনৈতিক উন্নয়নের কোন দিক প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের আলোকে বাংলাদেশের টেকসই উন্নয়ন অর্জনের চ্যালেঞ্জ ও সম্ভাবনা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="tips-section">
+      <h3 class="tips-title">📚 পরীক্ষার জন্য বিশেষ টিপস</h3>
+      <ul class="tips-list">
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>অধ্যায় ২, ৩ ও ৫ সবচেয়ে গুরুত্বপূর্ণ - এখান থেকে প্রতি বছর বেশি প্রশ্ন আসে</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>জাতীয় আয় পরিমাপের গাণিতিক সমস্যা ভালোভাবে আয়ত্ত করুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>মুদ্রাস্ফীতি, বেকারত্ব, GDP-GNP এর পার্থক্য মুখস্থ রাখুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>বাংলাদেশের অর্থনীতি সম্পর্কিত সাম্প্রতিক তথ্য জানুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>আন্তর্জাতিক সংস্থাগুলোর (WTO, IMF, World Bank) কাজ জানুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>তুলনামূলক সুবিধা তত্ত্বের গাণিতিক সমস্যা অনুশীলন করুন</span></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+        const defaultConfig = {
+            main_title: "HSC অর্থনীতি সাজেশন",
+            subtitle: "২০২৬ পরীক্ষার্থীদের জন্য বিশেষ প্রস্তুতি",
+            board_name: "ঢাকা বোর্ড",
+            paper_one_title: "অর্থনীতি ১ম পত্র",
+            paper_two_title: "অর্থনীতি ২য় পত্র",
+            background_color: "#0a0e27",
+            primary_color: "#6366f1",
+            secondary_color: "#a78bfa",
+            text_color: "#e0e6ed",
+            accent_color: "#60a5fa",
+            font_family: "Hind Siliguri",
+            font_size: 16
+        };
+
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        function showPaper(paperId) {
+            document.getElementById('navigationView').style.display = 'none';
+            document.getElementById('paper1Content').classList.remove('active');
+            document.getElementById('paper2Content').classList.remove('active');
+            
+            if (paperId === 'paper1') {
+                document.getElementById('paper1Content').classList.add('active');
+            } else {
+                document.getElementById('paper2Content').classList.add('active');
+            }
+        }
+
+        function showNavigation() {
+            document.getElementById('navigationView').style.display = 'grid';
+            document.getElementById('paper1Content').classList.remove('active');
+            document.getElementById('paper2Content').classList.remove('active');
+        }
+
+        async function onConfigChange(config) {
+            const mainTitle = document.getElementById('mainTitle');
+            const subtitle = document.getElementById('subtitle');
+            const boardName = document.getElementById('boardName');
+            const paperOneTitle = document.getElementById('paperOneTitle');
+            const paperTwoTitle = document.getElementById('paperTwoTitle');
+            
+            if (mainTitle) mainTitle.textContent = config.main_title || defaultConfig.main_title;
+            if (subtitle) subtitle.textContent = config.subtitle || defaultConfig.subtitle;
+            if (boardName) boardName.textContent = config.board_name || defaultConfig.board_name;
+            if (paperOneTitle) paperOneTitle.textContent = config.paper_one_title || defaultConfig.paper_one_title;
+            if (paperTwoTitle) paperTwoTitle.textContent = config.paper_two_title || defaultConfig.paper_two_title;
+            
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+            
+            document.body.style.fontFamily = `'${customFont}', sans-serif`;
+            document.querySelector('.main-title').style.fontSize = `${baseSize * 1.875}px`;
+            document.querySelector('.subtitle').style.fontSize = `${baseSize * 0.875}px`;
+            document.querySelectorAll('.paper-title').forEach(el => {
+                el.style.fontSize = `${baseSize * 0.9375}px`;
+            });
+            document.querySelectorAll('.chapter-name').forEach(el => {
+                el.style.fontSize = `${baseSize}px`;
+            });
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.primary_color || defaultConfig.primary_color,
+                            set: (value) => {
+                                config.primary_color = value;
+                                window.elementSdk.setConfig({ primary_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["main_title", config.main_title || defaultConfig.main_title],
+                    ["subtitle", config.subtitle || defaultConfig.subtitle],
+                    ["board_name", config.board_name || defaultConfig.board_name],
+                    ["paper_one_title", config.paper_one_title || defaultConfig.paper_one_title],
+                    ["paper_two_title", config.paper_two_title || defaultConfig.paper_two_title]
+                ])
+            });
+        }
+
+        createStars();
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b41fed8a5d2ba5f',t:'MTc2Njc2Njk3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
