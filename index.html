@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="bn">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSC Economics Suggestion 2026</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap');
+        
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .app-container {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1729 100%);
+            font-family: 'Hind Siliguri', sans-serif;
+            color: #e0e6ed;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3% 4%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 4%;
+            padding: 3% 2%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .main-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1%;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(167, 139, 250, 0.8)); }
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            color: #94a3b8;
+            margin-bottom: 1%;
+            font-weight: 500;
+        }
+        
+        .board-badge {
+            display: inline-block;
+            padding: 1% 3%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 1%;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .navigation-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3%;
+            margin-bottom: 4%;
+        }
+        
+        .paper-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border-radius: 20px;
+            padding: 3%;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .paper-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .paper-card:hover {
+            border-color: #6366f1;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        .paper-card:hover::before {
+            opacity: 1;
+        }
+        
+        .paper-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .paper-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 3%;
+            color: #e0e6ed;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chapter-list {
+            list-style: none;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chapter-item {
+            padding: 2% 3%;
+            margin-bottom: 2%;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 10px;
+            border-left: 3px solid #6366f1;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .chapter-item:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateX(5px);
+            border-left-color: #a78bfa;
+        }
+        
+        .chapter-number {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            color: #60a5fa;
+            min-width: 30px;
+        }
+        
+        .chapter-name {
+            flex: 1;
+            font-size: 1em;
+            color: #cbd5e1;
+        }
+        
+        .importance-badge {
+            padding: 1% 2%;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .super-important {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .very-important {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+        }
+        
+        .important {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .content-section {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border-radius: 20px;
+            padding: 3%;
+            margin-bottom: 3%;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3%;
+            padding-bottom: 2%;
+            border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .back-button {
+            padding: 2% 4%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .chapter-content {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 15px;
+            padding: 3%;
+            margin-bottom: 3%;
+        }
+        
+        .chapter-content h3 {
+            font-size: 1.5em;
+            color: #60a5fa;
+            margin-bottom: 2%;
+            font-weight: 600;
+        }
+        
+        .topic-list {
+            list-style: none;
+            margin-bottom: 3%;
+        }
+        
+        .topic-item {
+            padding: 2%;
+            margin-bottom: 1.5%;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            border-left: 2px solid #8b5cf6;
+            font-size: 1em;
+            color: #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        
+        .topic-item:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateX(3px);
+        }
+        
+        .question-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-radius: 12px;
+            padding: 3%;
+            margin-top: 3%;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .question-title {
+            font-size: 1.2em;
+            color: #60a5fa;
+            margin-bottom: 2%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .question-text {
+            padding: 1.5%;
+            margin-bottom: 1%;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+        
+        .stimulus-box {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            border-radius: 12px;
+            padding: 3%;
+            margin-top: 3%;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        
+        .stimulus-title {
+            font-size: 1.2em;
+            color: #a78bfa;
+            margin-bottom: 2%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .stimulus-content {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 10px;
+            padding: 3%;
+        }
+        
+        .stimulus-text {
+            padding: 2%;
+            margin-bottom: 2%;
+            background: rgba(168, 85, 247, 0.1);
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #e0e6ed;
+            line-height: 1.8;
+            border-left: 3px solid #a78bfa;
+        }
+        
+        .tips-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            border-radius: 15px;
+            padding: 3%;
+            margin-top: 3%;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .tips-title {
+            font-size: 1.3em;
+            color: #10b981;
+            margin-bottom: 2%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+        
+        .tips-list {
+            list-style: none;
+        }
+        
+        .tip-item {
+            padding: 2%;
+            margin-bottom: 1.5%;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #cbd5e1;
+            display: flex;
+            align-items: flex-start;
+            gap: 2%;
+        }
+        
+        .tip-icon {
+            color: #10b981;
+            font-weight: 700;
+            min-width: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .navigation-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .paper-number {
+                font-size: 2em;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: 2%;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="app-container">
+   <div class="stars" id="stars"></div>
+   <div class="content-wrapper">
+    <div class="header">
+     <h1 class="main-title" id="mainTitle">HSC অর্থনীতি সাজেশন</h1>
+     <p class="subtitle" id="subtitle">২০২৬ পরীক্ষার্থীদের জন্য বিশেষ প্রস্তুতি</p><span class="board-badge" id="boardName">ঢাকা বোর্ড</span>
+    </div>
+    <div id="navigationView" class="navigation-container">
+     <div class="paper-card" onclick="showPaper('paper1')">
+      <div class="paper-number">
+       ০১
+      </div>
+      <h2 class="paper-title" id="paperOneTitle">অর্থনীতি ১ম পত্র</h2>
+      <ul class="chapter-list">
+       <li class="chapter-item"><span class="chapter-number">০১</span> <span class="chapter-name">অর্থনীতি পরিচয়</span> <span class="importance-badge very-important">গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০২</span> <span class="chapter-name">ভোক্তা ও উৎপাদক তত্ত্ব</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৩</span> <span class="chapter-name">উৎপাদন ব্যয় ও আয়</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৪</span> <span class="chapter-name">বাজার</span> <span class="importance-badge very-important">গুরুত্বপূর্ণ</span></li>
+      </ul>
+     </div>
+     <div class="paper-card" onclick="showPaper('paper2')">
+      <div class="paper-number">
+       ০২
+      </div>
+      <h2 class="paper-title" id="paperTwoTitle">অর্থনীতি ২য় পত্র</h2>
+      <ul class="chapter-list">
+       <li class="chapter-item"><span class="chapter-number">০১</span> <span class="chapter-name">সামষ্টিক অর্থনীতি পরিচয়</span> <span class="importance-badge very-important">গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০২</span> <span class="chapter-name">জাতীয় আয়</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৩</span> <span class="chapter-name">মুদ্রা ও ব্যাংকিং</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+       <li class="chapter-item"><span class="chapter-number">০৪</span> <span class="chapter-name">আন্তর্জাতিক বাণিজ্য</span> <span class="importance-badge super-important">অতি গুরুত্বপূর্ণ</span></li>
+      </ul>
+     </div>
+    </div>
+    <div id="paper1Content" class="content-section">
+     <div class="section-header">
+      <h2 class="section-title">অর্থনীতি ১ম পত্র - বিস্তারিত সাজেশন</h2><button class="back-button" onclick="showNavigation()">← ফিরে যান</button>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ১: অর্থনীতি পরিচয়</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ অর্থনীতির সংজ্ঞা ও পরিধি</li>
+       <li class="topic-item">✦ অর্থনীতির মৌলিক সমস্যা</li>
+       <li class="topic-item">✦ অর্থনৈতিক ব্যবস্থা (পুঁজিবাদী, সমাজতান্ত্রিক, মিশ্র)</li>
+       <li class="topic-item">✦ উৎপাদন সম্ভাবনা রেখা (PPC)</li>
+       <li class="topic-item">✦ সুযোগ ব্যয়</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. অর্থনীতি কী?</p>
+       <p class="question-text">২. অভাব কাকে বলে?</p>
+       <p class="question-text">৩. উৎপাদন সম্ভাবনা রেখা কী?</p>
+       <p class="question-text">৪. পুঁজিবাদী অর্থব্যবস্থা কী?</p>
+       <p class="question-text">৫. সুযোগ ব্যয় কী?</p>
+       <p class="question-text">৬. মিশ্র অর্থব্যবস্থা কী?</p>
+       <p class="question-text">৭. সম্পদ কী?</p>
+       <p class="question-text">৮. অর্থনৈতিক সমস্যা কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> রহিম একজন কৃষক। তার ১০ একর জমি আছে। তিনি ভাবছেন পুরো জমিতে ধান চাষ করবেন নাকি কিছু জমিতে সবজি চাষ করবেন। ধান চাষে লাভ কম কিন্তু নিশ্চিত, আর সবজি চাষে লাভ বেশি কিন্তু ঝুঁকি আছে।</p>
+        <p class="question-text"><strong>ক)</strong> সুযোগ ব্যয় কী?</p>
+        <p class="question-text"><strong>খ)</strong> "অভাব অসীম কিন্তু সম্পদ সীমিত" - ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে রহিমের সিদ্ধান্ত গ্রহণে কোন অর্থনৈতিক সমস্যা প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উৎপাদন সম্ভাবনা রেখার সাহায্যে রহিমের সিদ্ধান্ত বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> সালমা একজন গৃহিণী। তার মাসিক বাজেট ২০,০০০ টাকা। তিনি এই টাকা দিয়ে খাবার, কাপড়, শিক্ষা ও চিকিৎসা খাতে ব্যয় করেন। কিন্তু তার পরিবারের চাহিদা আরও বেশি। তিনি সবকিছু কিনতে পারেন না।</p>
+        <p class="question-text"><strong>ক)</strong> অর্থনীতি কী?</p>
+        <p class="question-text"><strong>খ)</strong> অর্থনীতির মৌলিক সমস্যা ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে সালমার পরিবারে কোন অর্থনৈতিক সমস্যা দেখা যাচ্ছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> "সীমিত সম্পদের সর্বোত্তম ব্যবহারই অর্থনীতির মূল লক্ষ্য" - উদ্দীপকের আলোকে মূল্যায়ন করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> 'ক' দেশে সরকার সব অর্থনৈতিক সিদ্ধান্ত নেয়। কী উৎপাদন হবে, কীভাবে হবে, কার জন্য হবে সব সরকার ঠিক করে। 'খ' দেশে বাজার ব্যবস্থা সব সিদ্ধান্ত নেয়। ব্যক্তি মালিকানা ও মুনাফা অর্জনই মূল লক্ষ্য।</p>
+        <p class="question-text"><strong>ক)</strong> পুঁজিবাদী অর্থব্যবস্থা কী?</p>
+        <p class="question-text"><strong>খ)</strong> মিশ্র অর্থব্যবস্থা বলতে কী বোঝায়?</p>
+        <p class="question-text"><strong>গ)</strong> 'ক' দেশের অর্থনৈতিক ব্যবস্থা কোন ধরনের? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে উল্লিখিত দুই দেশের অর্থনৈতিক ব্যবস্থার তুলনামূলক বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি কারখানা বছরে সর্বোচ্চ ১০০০টি জুতা অথবা ৫০০টি ব্যাগ উৎপাদন করতে পারে। কারখানার মালিক সিদ্ধান্ত নিলেন ৬০০টি জুতা এবং ২০০টি ব্যাগ উৎপাদন করবেন।</p>
+        <p class="question-text"><strong>ক)</strong> উৎপাদন সম্ভাবনা রেখা কী?</p>
+        <p class="question-text"><strong>খ)</strong> সুযোগ ব্যয় বৃদ্ধি বিধি ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকের তথ্য দিয়ে একটি উৎপাদন সম্ভাবনা রেখা অঙ্কন করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> মালিকের সিদ্ধান্ত কি সম্পদের সর্বোত্তম ব্যবহার নিশ্চিত করে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> রাজু একজন ছাত্র। তার কাছে ৫০০ টাকা আছে। সে হয় একটি বই কিনবে (৫০০ টাকা) অথবা বন্ধুদের সাথে সিনেমা দেখতে যাবে (৫০০ টাকা)। সে বই কেনার সিদ্ধান্ত নিল।</p>
+        <p class="question-text"><strong>ক)</strong> অভাব কী?</p>
+        <p class="question-text"><strong>খ)</strong> "কীভাবে উৎপাদন করতে হবে" - এই সমস্যা ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> রাজুর সিদ্ধান্তে সুযোগ ব্যয় কত? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে অর্থনীতির কোন মৌলিক সমস্যা প্রতিফলিত হয়েছে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ২: ভোক্তা ও উৎপাদক তত্ত্ব ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ উপযোগ ও উপযোগের প্রকারভেদ</li>
+       <li class="topic-item">✦ প্রান্তিক উপযোগ হ্রাস বিধি</li>
+       <li class="topic-item">✦ ভোক্তার ভারসাম্য</li>
+       <li class="topic-item">✦ চাহিদা রেখা ও চাহিদার স্থিতিস্থাপকতা</li>
+       <li class="topic-item">✦ উদাসীনতা রেখা বিশ্লেষণ</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. উপযোগ কী?</p>
+       <p class="question-text">২. প্রান্তিক উপযোগ কাকে বলে?</p>
+       <p class="question-text">৩. চাহিদার স্থিতিস্থাপকতা কী?</p>
+       <p class="question-text">৪. উদাসীনতা রেখা কী?</p>
+       <p class="question-text">৫. ভোক্তার ভারসাম্য কী?</p>
+       <p class="question-text">৬. মোট উপযোগ কী?</p>
+       <p class="question-text">৭. বাজেট রেখা কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> করিম প্রতিদিন বাজার থেকে আম কিনে খায়। প্রথম আমটি খেয়ে সে অনেক তৃপ্তি পায়। দ্বিতীয় আমটি খেয়ে কিছুটা কম তৃপ্তি পায়। তৃতীয় আমটি খেয়ে আরও কম তৃপ্তি পায়। চতুর্থ আমটি খেতে তার আর ভালো লাগে না।</p>
+        <p class="question-text"><strong>ক)</strong> মোট উপযোগ কী?</p>
+        <p class="question-text"><strong>খ)</strong> চাহিদার স্থিতিস্থাপকতা বলতে কী বোঝায়?</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন অর্থনৈতিক বিধি প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের আলোকে প্রান্তিক উপযোগ হ্রাস বিধির যৌক্তিকতা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> রিনা বাজারে গিয়ে দেখল আপেলের দাম ১০০ টাকা থেকে বেড়ে ১২০ টাকা হয়েছে। আগে সে ১০টি আপেল কিনত, এখন ৮টি আপেল কিনছে। অন্যদিকে কমলার দাম ৫০ টাকা থেকে বেড়ে ৬০ টাকা হলেও সে আগের মতোই ১০টি কমলা কিনছে।</p>
+        <p class="question-text"><strong>ক)</strong> চাহিদা কী?</p>
+        <p class="question-text"><strong>খ)</strong> চাহিদা রেখা ডানদিকে নিম্নগামী কেন?</p>
+        <p class="question-text"><strong>গ)</strong> আপেলের চাহিদার স্থিতিস্থাপকতা নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> আপেল ও কমলার চাহিদার স্থিতিস্থাপকতার তুলনামূলক বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> জামিলের কাছে ১০০ টাকা আছে। চকলেটের দাম ১০ টাকা এবং বিস্কুটের দাম ৫ টাকা। প্রথম চকলেট থেকে সে ২০ একক উপযোগ পায় এবং প্রথম বিস্কুট থেকে ১৫ একক উপযোগ পায়।</p>
+        <p class="question-text"><strong>ক)</strong> ভোক্তার ভারসাম্য কী?</p>
+        <p class="question-text"><strong>খ)</strong> সমান প্রান্তিক উপযোগ বিধি ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> জামিল কোন পণ্য কিনলে বেশি উপযোগ পাবে? গাণিতিক বিশ্লেষণ করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> জামিলের ভোক্তা ভারসাম্য অর্জনের শর্ত বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একজন ভোক্তা দুটি পণ্য X ও Y ক্রয় করে। X পণ্যের দাম ২০ টাকা এবং Y পণ্যের দাম ১০ টাকা। তার আয় ২০০ টাকা। X পণ্য থেকে প্রান্তিক উপযোগ ৪০ এবং Y পণ্য থেকে প্রান্তিক উপযোগ ৩০।</p>
+        <p class="question-text"><strong>ক)</strong> প্রান্তিক উপযোগ কী?</p>
+        <p class="question-text"><strong>খ)</strong> উদাসীনতা রেখার বৈশিষ্ট্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> ভোক্তা কি ভারসাম্যে আছে? গাণিতিক প্রমাণ দাও।</p>
+        <p class="question-text"><strong>ঘ)</strong> ভোক্তা ভারসাম্যে না থাকলে কীভাবে ভারসাম্য অর্জন করবে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> চালের দাম ৫০ টাকা থেকে বেড়ে ৬০ টাকা হলে চাহিদা ১০০ কেজি থেকে কমে ৯৫ কেজি হয়। অন্যদিকে মোবাইলের দাম ১০,০০০ টাকা থেকে বেড়ে ১২,০০০ টাকা হলে চাহিদা ১০০টি থেকে কমে ৬০টি হয়।</p>
+        <p class="question-text"><strong>ক)</strong> স্থিতিস্থাপকতা কী?</p>
+        <p class="question-text"><strong>খ)</strong> চাহিদার স্থিতিস্থাপকতার প্রকারভেদ লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> চাল ও মোবাইলের চাহিদার স্থিতিস্থাপকতা নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> কোন পণ্যের চাহিদা বেশি স্থিতিস্থাপক? কারণসহ বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৩: উৎপাদন ব্যয় ও আয় ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ উৎপাদন ফাংশন</li>
+       <li class="topic-item">✦ মোট, গড় ও প্রান্তিক উৎপাদন</li>
+       <li class="topic-item">✦ ক্রমহ্রাসমান প্রান্তিক উৎপাদন বিধি</li>
+       <li class="topic-item">✦ উৎপাদন ব্যয় (স্থির ও পরিবর্তনশীল)</li>
+       <li class="topic-item">✦ উৎপাদকের ভারসাম্য</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. উৎপাদন ফাংশন কী?</p>
+       <p class="question-text">২. প্রান্তিক উৎপাদন কাকে বলে?</p>
+       <p class="question-text">৩. স্থির ব্যয় কী?</p>
+       <p class="question-text">৪. প্রান্তিক আয় কী?</p>
+       <p class="question-text">৫. উৎপাদকের ভারসাম্য কী?</p>
+       <p class="question-text">৬. মোট উৎপাদন কী?</p>
+       <p class="question-text">৭. পরিবর্তনশীল ব্যয় কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি কারখানায় ১ জন শ্রমিক নিয়োগ দিলে ১০টি পণ্য উৎপাদন হয়। ২ জন শ্রমিক নিয়োগ দিলে ২৫টি পণ্য উৎপাদন হয়। ৩ জন শ্রমিক নিয়োগ দিলে ৩৫টি পণ্য উৎপাদন হয়। ৪ জন শ্রমিক নিয়োগ দিলে ৪০টি পণ্য উৎপাদন হয়।</p>
+        <p class="question-text"><strong>ক)</strong> মোট উৎপাদন কী?</p>
+        <p class="question-text"><strong>খ)</strong> স্থির ব্যয় ও পরিবর্তনশীল ব্যয়ের পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে প্রতিটি শ্রমিকের প্রান্তিক উৎপাদন নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে কোন অর্থনৈতিক বিধি কার্যকর রয়েছে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি কোম্পানির মাসিক স্থির ব্যয় ৫০,০০০ টাকা। প্রতিটি পণ্য উৎপাদনে পরিবর্তনশীল ব্যয় ১০০ টাকা। কোম্পানি মাসে ১০০০টি পণ্য উৎপাদন করে এবং প্রতিটি ২০০ টাকায় বিক্রয় করে।</p>
+        <p class="question-text"><strong>ক)</strong> মোট ব্যয় কী?</p>
+        <p class="question-text"><strong>খ)</strong> গড় ব্যয় ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> কোম্পানির মোট ব্যয় ও মোট আয় নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> কোম্পানি লাভজনক অবস্থানে আছে কি? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি জমিতে সার প্রয়োগের ফলে উৎপাদন বৃদ্ধি পায়। ১ বস্তা সার দিলে ১০ মণ ধান, ২ বস্তা সার দিলে ২২ মণ ধান, ৩ বস্তা সার দিলে ৩২ মণ ধান, ৪ বস্তা সার দিলে ৪০ মণ ধান এবং ৫ বস্তা সার দিলে ৪৫ মণ ধান উৎপাদন হয়।</p>
+        <p class="question-text"><strong>ক)</strong> প্রান্তিক উৎপাদন কী?</p>
+        <p class="question-text"><strong>খ)</strong> ক্রমহ্রাসমান প্রান্তিক উৎপাদন বিধি ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> প্রতিটি বস্তা সারের প্রান্তিক উৎপাদন নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে ক্রমহ্রাসমান প্রান্তিক উৎপাদন বিধি প্রযোজ্য কি? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি ফার্মের মোট আয় ১,০০,০০০ টাকা। মোট স্থির ব্যয় ২০,০০০ টাকা এবং মোট পরিবর্তনশীল ব্যয় ৬০,০০০ টাকা। ফার্মটি ১০০০টি পণ্য উৎপাদন করে।</p>
+        <p class="question-text"><strong>ক)</strong> মোট আয় কী?</p>
+        <p class="question-text"><strong>খ)</strong> প্রান্তিক ব্যয় বলতে কী বোঝায়?</p>
+        <p class="question-text"><strong>গ)</strong> ফার্মের গড় ব্যয় ও গড় আয় নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> ফার্মটি কি লাভ করছে নাকি ক্ষতি? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একজন উৎপাদক দুটি উপকরণ শ্রম ও মূলধন ব্যবহার করে। শ্রমের প্রান্তিক উৎপাদন ২০ এবং মূল্য ১০০ টাকা। মূলধনের প্রান্তিক উৎপাদন ৪০ এবং মূল্য ২৫০ টাকা।</p>
+        <p class="question-text"><strong>ক)</strong> উৎপাদকের ভারসাম্য কী?</p>
+        <p class="question-text"><strong>খ)</strong> উৎপাদন ফাংশন ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উৎপাদক কি ভারসাম্যে আছে? গাণিতিক প্রমাণ দাও।</p>
+        <p class="question-text"><strong>ঘ)</strong> উৎপাদক ভারসাম্যে না থাকলে কীভাবে ভারসাম্য অর্জন করবে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৪: বাজার</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ বাজারের ধারণা ও শ্রেণিবিভাগ</li>
+       <li class="topic-item">✦ পূর্ণ প্রতিযোগিতামূলক বাজার</li>
+       <li class="topic-item">✦ একচেটিয়া বাজার</li>
+       <li class="topic-item">✦ একচেটিয়া প্রতিযোগিতা</li>
+       <li class="topic-item">✦ বিভিন্ন বাজারে মূল্য নির্ধারণ</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. বাজার কী?</p>
+       <p class="question-text">২. পূর্ণ প্রতিযোগিতা কী?</p>
+       <p class="question-text">৩. একচেটিয়া বাজার কাকে বলে?</p>
+       <p class="question-text">৪. অলিগোপলি কী?</p>
+       <p class="question-text">৫. একচেটিয়া প্রতিযোগিতা কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> 'ক' এলাকায় অনেক কৃষক একই ধরনের ধান উৎপাদন করে এবং বাজারে বিক্রি করে। কোনো কৃষকই দাম নির্ধারণ করতে পারে না। অন্যদিকে 'খ' এলাকায় শুধুমাত্র একটি কোম্পানি বিদ্যুৎ সরবরাহ করে এবং তারাই দাম নির্ধারণ করে।</p>
+        <p class="question-text"><strong>ক)</strong> একচেটিয়া প্রতিযোগিতা কী?</p>
+        <p class="question-text"><strong>খ)</strong> পূর্ণ প্রতিযোগিতামূলক বাজারের বৈশিষ্ট্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> 'ক' এলাকার বাজার কোন ধরনের? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> 'ক' ও 'খ' এলাকার বাজার ব্যবস্থার তুলনামূলক বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি শহরে মাত্র তিনটি মোবাইল কোম্পানি সেবা দেয়। তারা পরস্পরের দামের উপর নির্ভরশীল। একটি কোম্পানি দাম কমালে অন্যরাও দাম কমায়। তারা প্রায়ই একসাথে বসে দাম নির্ধারণ করে।</p>
+        <p class="question-text"><strong>ক)</strong> অলিগোপলি কী?</p>
+        <p class="question-text"><strong>খ)</strong> একচেটিয়া বাজারের বৈশিষ্ট্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন ধরনের বাজার প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> এই বাজার ব্যবস্থা ভোক্তাদের জন্য কতটা সুবিধাজনক? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি বাজারে অনেক বিক্রেতা আছে কিন্তু প্রত্যেকে ভিন্ন ব্র্যান্ডের পণ্য বিক্রয় করে। পেপসি, কোকাকোলা, স্প্রাইট - সবই কোমল পানীয় কিন্তু ভোক্তারা ব্র্যান্ড পছন্দ করে কেনে।</p>
+        <p class="question-text"><strong>ক)</strong> একচেটিয়া প্রতিযোগিতা কী?</p>
+        <p class="question-text"><strong>খ)</strong> পণ্য পার্থক্যকরণ বলতে কী বোঝায়?</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন ধরনের বাজার বিদ্যমান? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> এই বাজারে বিজ্ঞাপনের ভূমিকা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি গ্রামে শুধুমাত্র একজন ডাক্তার আছেন। তিনি যে ফি নির্ধারণ করেন রোগীদের তা দিতেই হয়। কোনো বিকল্প নেই। তিনি ধনী রোগীদের কাছে বেশি ফি নেন এবং গরিব রোগীদের কাছে কম ফি নেন।</p>
+        <p class="question-text"><strong>ক)</strong> মূল্য বৈষম্য কী?</p>
+        <p class="question-text"><strong>খ)</strong> একচেটিয়া বাজারে প্রবেশে বাধা ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন ধরনের বাজার প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> ডাক্তারের মূল্য নির্ধারণ পদ্ধতি কি ন্যায্য? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি বাজারে হাজারো ক্রেতা ও বিক্রেতা আছে। সবাই একই মানের পণ্য কেনাবেচা করে। কেউ বাজার দাম থেকে বেশি দাম নিতে পারে না। সবাই বাজার সম্পর্কে সম্পূর্ণ তথ্য জানে।</p>
+        <p class="question-text"><strong>ক)</strong> পূর্ণ প্রতিযোগিতা কী?</p>
+        <p class="question-text"><strong>খ)</strong> পূর্ণ প্রতিযোগিতায় ফার্মের চাহিদা রেখা কেমন?</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে পূর্ণ প্রতিযোগিতার কোন কোন শর্ত পূরণ হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> "পূর্ণ প্রতিযোগিতা একটি আদর্শ বাজার" - উদ্দীপকের আলোকে মূল্যায়ন করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="tips-section">
+      <h3 class="tips-title">📚 পরীক্ষার জন্য বিশেষ টিপস</h3>
+      <ul class="tips-list">
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>অধ্যায় ২ ও ৩ থেকে প্রতি বছর নিশ্চিত ২-৩টি প্রশ্ন আসে - এগুলো খুব ভালোভাবে পড়ুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>গাণিতিক সমস্যাগুলো (চাহিদা স্থিতিস্থাপকতা, ভারসাম্য) বারবার অনুশীলন করুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>রেখাচিত্র আঁকার অনুশীলন করুন - উদাসীনতা রেখা, চাহিদা-যোগান রেখা</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>সংজ্ঞা ও পার্থক্যগুলো ছোট নোট করে রাখুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>বিগত বছরের বোর্ড প্রশ্ন সমাধান করুন (২০২০-২০২৫)</span></li>
+      </ul>
+     </div>
+    </div>
+    <div id="paper2Content" class="content-section">
+     <div class="section-header">
+      <h2 class="section-title">অর্থনীতি ২য় পত্র - বিস্তারিত সাজেশন</h2><button class="back-button" onclick="showNavigation()">← ফিরে যান</button>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ১: সামষ্টিক অর্থনীতি পরিচয়</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ সামষ্টিক অর্থনীতির ধারণা</li>
+       <li class="topic-item">✦ ব্যষ্টিক ও সামষ্টিক অর্থনীতির পার্থক্য</li>
+       <li class="topic-item">✦ সামষ্টিক অর্থনৈতিক লক্ষ্য</li>
+       <li class="topic-item">✦ অর্থনৈতিক প্রবৃদ্ধি ও উন্নয়ন</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. সামষ্টিক অর্থনীতি কী?</p>
+       <p class="question-text">২. ব্যষ্টিক অর্থনীতি কী?</p>
+       <p class="question-text">৩. অর্থনৈতিক প্রবৃদ্ধি কী?</p>
+       <p class="question-text">৪. মুদ্রাস্ফীতি কী?</p>
+       <p class="question-text">৫. বেকারত্ব কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> অর্থনীতিবিদ জনাব আলম একটি গবেষণায় দেখলেন যে, দেশের মোট জাতীয় উৎপাদন, বেকারত্বের হার, মুদ্রাস্ফীতি এবং সামগ্রিক অর্থনৈতিক প্রবৃদ্ধি নিয়ে কাজ করছেন। অন্যদিকে তার সহকর্মী জনাব করিম একটি নির্দিষ্ট পণ্যের দাম ও ভোক্তার ক্রয় আচরণ নিয়ে গবেষণা করছেন।</p>
+        <p class="question-text"><strong>ক)</strong> বেকারত্ব কী?</p>
+        <p class="question-text"><strong>খ)</strong> ব্যষ্টিক ও সামষ্টিক অর্থনীতির পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> জনাব আলমের গবেষণা অর্থনীতির কোন শাখার অন্তর্ভুক্ত? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে উল্লিখিত দুই ধরনের গবেষণার তুলনামূলক গুরুত্ব বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> বাংলাদেশের GDP গত বছর ৭% হারে বৃদ্ধি পেয়েছে। কিন্তু মুদ্রাস্ফীতি ৯% এ পৌঁছেছে এবং বেকারত্বের হার ৫%। সরকার অর্থনৈতিক স্থিতিশীলতা আনার চেষ্টা করছে।</p>
+        <p class="question-text"><strong>ক)</strong> GDP কী?</p>
+        <p class="question-text"><strong>খ)</strong> অর্থনৈতিক প্রবৃদ্ধি ও উন্নয়নের পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে সামষ্টিক অর্থনীতির কোন কোন সমস্যা প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের অর্থনৈতিক পরিস্থিতি মোকাবেলায় সরকারের করণীয় বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একজন অর্থনীতিবিদ একটি কোম্পানির উৎপাদন ব্যয় ও মুনাফা নিয়ে গবেষণা করছেন। অন্য একজন অর্থনীতিবিদ পুরো দেশের জাতীয় আয়, কর্মসংস্থান ও মূল্যস্তর নিয়ে কাজ করছেন।</p>
+        <p class="question-text"><strong>ক)</strong> সামষ্টিক অর্থনীতি কী?</p>
+        <p class="question-text"><strong>খ)</strong> ব্যষ্টিক অর্থনীতির বৈশিষ্ট্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> প্রথম অর্থনীতিবিদ কোন শাখায় কাজ করছেন? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> দুই ধরনের অর্থনীতির পারস্পরিক নির্ভরশীলতা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি দেশের মাথাপিছু আয় বৃদ্ধি পাচ্ছে কিন্তু দারিদ্র্য কমছে না। শিক্ষা ও স্বাস্থ্যসেবার মান উন্নত হচ্ছে না। আয় বৈষম্য বাড়ছে।</p>
+        <p class="question-text"><strong>ক)</strong> অর্থনৈতিক উন্নয়ন কী?</p>
+        <p class="question-text"><strong>খ)</strong> সামষ্টিক অর্থনীতির লক্ষ্যসমূহ লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে অর্থনৈতিক প্রবৃদ্ধি আছে কিন্তু উন্নয়ন নেই - ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> "প্রবৃদ্ধি ছাড়া উন্নয়ন সম্ভব নয়" - উদ্দীপকের আলোকে মূল্যায়ন করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> দেশ 'ক' এর GDP ৫% হারে বৃদ্ধি পাচ্ছে, মুদ্রাস্ফীতি ৩%, বেকারত্ব ২%। দেশ 'খ' এর GDP ৮% হারে বৃদ্ধি পাচ্ছে, মুদ্রাস্ফীতি ১০%, বেকারত্ব ৮%।</p>
+        <p class="question-text"><strong>ক)</strong> মুদ্রাস্ফীতি কী?</p>
+        <p class="question-text"><strong>খ)</strong> পূর্ণ কর্মসংস্থান বলতে কী বোঝায়?</p>
+        <p class="question-text"><strong>গ)</strong> কোন দেশের অর্থনৈতিক অবস্থা ভালো? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> সামষ্টিক অর্থনৈতিক লক্ষ্য অর্জনে দুই দেশের তুলনামূলক বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ২: জাতীয় আয় ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ জাতীয় আয়ের ধারণা</li>
+       <li class="topic-item">✦ জাতীয় আয় পরিমাপের পদ্ধতি</li>
+       <li class="topic-item">✦ GDP, GNP, NNP, NI এর পার্থক্য</li>
+       <li class="topic-item">✦ মাথাপিছু আয়</li>
+       <li class="topic-item">✦ গুণক তত্ত্ব</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. জাতীয় আয় কী?</p>
+       <p class="question-text">২. GDP কী?</p>
+       <p class="question-text">৩. GNP কী?</p>
+       <p class="question-text">৪. মাথাপিছু আয় কী?</p>
+       <p class="question-text">৫. গুণক কী?</p>
+       <p class="question-text">৬. NNP কী?</p>
+       <p class="question-text">৭. জাতীয় আয় কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> ২০২৫ সালে বাংলাদেশের মোট দেশজ উৎপাদন (GDP) ছিল ৪৫০ বিলিয়ন ডলার। বিদেশ থেকে নিট আয় ছিল ২০ বিলিয়ন ডলার। মূলধনের অবচয় ছিল ৩০ বিলিয়ন ডলার। জনসংখ্যা ছিল ১৭০ মিলিয়ন।</p>
+        <p class="question-text"><strong>ক)</strong> NNP কী?</p>
+        <p class="question-text"><strong>খ)</strong> GDP ও GNP এর পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে বাংলাদেশের GNP নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের তথ্যের ভিত্তিতে বাংলাদেশের মাথাপিছু আয় নির্ণয় করো এবং এর অর্থনৈতিক তাৎপর্য বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি দেশের ভোগ ব্যয় ৮০০ কোটি টাকা, বিনিয়োগ ২০০ কোটি টাকা, সরকারি ব্যয় ১৫০ কোটি টাকা, রপ্তানি ১০০ কোটি টাকা এবং আমদানি ৫০ কোটি টাকা।</p>
+        <p class="question-text"><strong>ক)</strong> জাতীয় আয় কী?</p>
+        <p class="question-text"><strong>খ)</strong> ব্যয় পদ্ধতিতে জাতীয় আয় পরিমাপ ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে দেশটির GDP নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> জাতীয় আয় পরিমাপে ব্যয় পদ্ধতির সুবিধা ও অসুবিধা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি অর্থনীতিতে প্রান্তিক ভোগ প্রবণতা ০.৮। সরকার ১০০ কোটি টাকা বিনিয়োগ বৃদ্ধি করল।</p>
+        <p class="question-text"><strong>ক)</strong> গুণক কী?</p>
+        <p class="question-text"><strong>খ)</strong> প্রান্তিক ভোগ প্রবণতা ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে গুণক নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> বিনিয়োগ বৃদ্ধির ফলে জাতীয় আয়ে কত পরিবর্তন হবে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> দেশ 'ক' এর GDP ৫০০ বিলিয়ন ডলার এবং জনসংখ্যা ১০০ মিলিয়ন। দেশ 'খ' এর GDP ১০০০ বিলিয়ন ডলার এবং জনসংখ্যা ৫০০ মিলিয়ন।</p>
+        <p class="question-text"><strong>ক)</strong> মাথাপিছু আয় কী?</p>
+        <p class="question-text"><strong>খ)</strong> GDP ও জাতীয় কল্যাণের সম্পর্ক ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> দুই দেশের মাথাপিছু আয় নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> কোন দেশের জনগণের জীবনযাত্রার মান ভালো? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি দেশের কৃষি খাতের উৎপাদন ৩০০ কোটি টাকা, শিল্প খাতের উৎপাদন ৫০০ কোটি টাকা এবং সেবা খাতের উৎপাদন ৪০০ কোটি টাকা। মধ্যবর্তী ব্যয় ২০০ কোটি টাকা।</p>
+        <p class="question-text"><strong>ক)</strong> মধ্যবর্তী পণ্য কী?</p>
+        <p class="question-text"><strong>খ)</strong> উৎপাদন পদ্ধতিতে জাতীয় আয় পরিমাপ ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে দেশটির GDP নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> জাতীয় আয় পরিমাপে দ্বৈত গণনা সমস্যা কীভাবে এড়ানো যায়? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৩: মুদ্রা ও ব্যাংকিং ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ মুদ্রার সংজ্ঞা ও কার্যাবলি</li>
+       <li class="topic-item">✦ মুদ্রার পরিমাণ তত্ত্ব</li>
+       <li class="topic-item">✦ মুদ্রাস্ফীতি ও মুদ্রাসংকোচন</li>
+       <li class="topic-item">✦ কেন্দ্রীয় ব্যাংক ও বাণিজ্যিক ব্যাংক</li>
+       <li class="topic-item">✦ ঋণ সৃষ্টি প্রক্রিয়া</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. মুদ্রা কী?</p>
+       <p class="question-text">২. মুদ্রাস্ফীতি কী?</p>
+       <p class="question-text">৩. কেন্দ্রীয় ব্যাংক কী?</p>
+       <p class="question-text">৪. ঋণ সৃষ্টি কী?</p>
+       <p class="question-text">৫. নগদ সংরক্ষণ অনুপাত কী?</p>
+       <p class="question-text">৬. ব্যাংক হার কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> গত বছর একটি দেশে পণ্যের দাম ছিল ১০০ টাকা। এ বছর একই পণ্যের দাম হয়েছে ১১০ টাকা। মানুষের আয় বাড়েনি কিন্তু সব কিছুর দাম বেড়ে গেছে। কেন্দ্রীয় ব্যাংক এই পরিস্থিতি নিয়ন্ত্রণের জন্য ব্যাংক হার বৃদ্ধি করেছে এবং নগদ সংরক্ষণ অনুপাত বাড়িয়েছে।</p>
+        <p class="question-text"><strong>ক)</strong> ব্যাংক হার কী?</p>
+        <p class="question-text"><strong>খ)</strong> মুদ্রাস্ফীতির কারণ ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন অর্থনৈতিক সমস্যা প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকে কেন্দ্রীয় ব্যাংকের গৃহীত পদক্ষেপের কার্যকারিতা মূল্যায়ন করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি ব্যাংকে ১০,০০০ টাকা জমা পড়ল। নগদ সংরক্ষণ অনুপাত ২০%। ব্যাংক বাকি টাকা ঋণ দিল। ঋণগ্রহীতা সেই টাকা অন্য ব্যাংকে জমা দিল।</p>
+        <p class="question-text"><strong>ক)</strong> ঋণ সৃষ্টি কী?</p>
+        <p class="question-text"><strong>খ)</strong> বাণিজ্যিক ব্যাংকের কার্যাবলি লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> প্রথম ব্যাংক কত টাকা ঋণ দিতে পারবে? হিসাব করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> এই প্রক্রিয়ায় সর্বমোট কত টাকা ঋণ সৃষ্টি হবে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি অর্থনীতিতে মুদ্রার পরিমাণ ১০০০ কোটি টাকা, মুদ্রার বেগ ৫, এবং লেনদেনের পরিমাণ ২৫০০ একক।</p>
+        <p class="question-text"><strong>ক)</strong> মুদ্রার বেগ কী?</p>
+        <p class="question-text"><strong>খ)</strong> ফিশারের মুদ্রার পরিমাণ তত্ত্ব ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে মূল্যস্তর নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> মুদ্রার পরিমাণ দ্বিগুণ হলে মূল্যস্তরে কী প্রভাব পড়বে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> বাংলাদেশ ব্যাংক নোট ইস্যু করে, সরকারের ব্যাংকার হিসেবে কাজ করে, বাণিজ্যিক ব্যাংকগুলোকে নিয়ন্ত্রণ করে এবং বৈদেশিক মুদ্রার রিজার্ভ রক্ষা করে।</p>
+        <p class="question-text"><strong>ক)</strong> কেন্দ্রীয় ব্যাংক কী?</p>
+        <p class="question-text"><strong>খ)</strong> কেন্দ্রীয় ব্যাংক ও বাণিজ্যিক ব্যাংকের পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে বাংলাদেশ ব্যাংকের কোন কোন কার্য উল্লেখ করা হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> "কেন্দ্রীয় ব্যাংক দেশের অর্থনীতির নিয়ন্ত্রক" - উদ্দীপকের আলোকে মূল্যায়ন করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> একটি দেশে মুদ্রাস্ফীতি বেড়ে ১২% হয়েছে। কেন্দ্রীয় ব্যাংক ব্যাংক হার ৬% থেকে বাড়িয়ে ৮% করল, নগদ সংরক্ষণ অনুপাত ১০% থেকে বাড়িয়ে ১৫% করল এবং খোলা বাজারে সরকারি বন্ড বিক্রয় শুরু করল।</p>
+        <p class="question-text"><strong>ক)</strong> মুদ্রানীতি কী?</p>
+        <p class="question-text"><strong>খ)</strong> সংকোচনমূলক মুদ্রানীতি ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কেন্দ্রীয় ব্যাংক কোন ধরনের মুদ্রানীতি অনুসরণ করছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের পদক্ষেপগুলো মুদ্রাস্ফীতি নিয়ন্ত্রণে কতটা কার্যকর? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="chapter-content">
+      <h3>অধ্যায় ৪: আন্তর্জাতিক বাণিজ্য ⭐⭐⭐</h3>
+      <ul class="topic-list">
+       <li class="topic-item">✦ আন্তর্জাতিক বাণিজ্যের ধারণা</li>
+       <li class="topic-item">✦ তুলনামূলক সুবিধা তত্ত্ব</li>
+       <li class="topic-item">✦ বৈদেশিক বিনিময় হার</li>
+       <li class="topic-item">✦ বাণিজ্য ভারসাম্য</li>
+       <li class="topic-item">✦ WTO, IMF, World Bank</li>
+      </ul>
+      <div class="question-box">
+       <h4 class="question-title">📝 জ্ঞানমূলক প্রশ্ন:</h4>
+       <p class="question-text">১. আন্তর্জাতিক বাণিজ্য কী?</p>
+       <p class="question-text">২. তুলনামূলক সুবিধা কী?</p>
+       <p class="question-text">৩. বৈদেশিক বিনিময় হার কী?</p>
+       <p class="question-text">৪. বাণিজ্য ভারসাম্য কী?</p>
+       <p class="question-text">৫. WTO কী?</p>
+       <p class="question-text">৬. রপ্তানি কী?</p>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ১:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> 'ক' দেশ কাপড় উৎপাদনে দক্ষ এবং 'খ' দেশ চাল উৎপাদনে দক্ষ। 'ক' দেশ ১ একক শ্রম দিয়ে ১০ মিটার কাপড় বা ৫ কেজি চাল উৎপাদন করতে পারে। 'খ' দেশ ১ একক শ্রম দিয়ে ৫ মিটার কাপড় বা ১০ কেজি চাল উৎপাদন করতে পারে। দুই দেশ পরস্পরের সাথে বাণিজ্য করার সিদ্ধান্ত নিয়েছে।</p>
+        <p class="question-text"><strong>ক)</strong> রপ্তানি কী?</p>
+        <p class="question-text"><strong>খ)</strong> আন্তর্জাতিক বাণিজ্যের সুবিধা লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে কোন দেশের কোন পণ্যে তুলনামূলক সুবিধা আছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> উদ্দীপকের আলোকে তুলনামূলক সুবিধা তত্ত্বের যৌক্তিকতা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ২:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> বাংলাদেশের রপ্তানি আয় ৫০ বিলিয়ন ডলার এবং আমদানি ব্যয় ৭০ বিলিয়ন ডলার। বৈদেশিক সাহায্য ৫ বিলিয়ন ডলার এবং প্রবাসী আয় ২০ বিলিয়ন ডলার।</p>
+        <p class="question-text"><strong>ক)</strong> বাণিজ্য ভারসাম্য কী?</p>
+        <p class="question-text"><strong>খ)</strong> লেনদেন ভারসাম্য ও বাণিজ্য ভারসাম্যের পার্থক্য লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপক থেকে বাংলাদেশের বাণিজ্য ভারসাম্য নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> বাংলাদেশের লেনদেন ভারসাম্যের অবস্থা বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৩:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> ১ ডলার = ১১০ টাকা বিনিময় হারে একজন রপ্তানিকারক ১০,০০০ ডলার মূল্যের পণ্য রপ্তানি করলেন। পরে বিনিময় হার ১ ডলার = ১২০ টাকা হলো।</p>
+        <p class="question-text"><strong>ক)</strong> বৈদেশিক বিনিময় হার কী?</p>
+        <p class="question-text"><strong>খ)</strong> মুদ্রার অবমূল্যায়ন ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>গ)</strong> বিনিময় হার পরিবর্তনে রপ্তানিকারকের লাভ-ক্ষতি নির্ণয় করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> বিনিময় হার বৃদ্ধি বাংলাদেশের রপ্তানিতে কী প্রভাব ফেলবে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৪:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> WTO বিশ্ব বাণিজ্য নিয়ম তৈরি করে, IMF আর্থিক সহায়তা দেয় এবং World Bank উন্নয়ন প্রকল্পে ঋণ দেয়। বাংলাদেশ তিনটি সংস্থারই সদস্য।</p>
+        <p class="question-text"><strong>ক)</strong> WTO কী?</p>
+        <p class="question-text"><strong>খ)</strong> IMF এর কার্যাবলি লেখো।</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে উল্লিখিত সংস্থাগুলোর মধ্যে পার্থক্য ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> এই সংস্থাগুলো বাংলাদেশের অর্থনৈতিক উন্নয়নে কীভাবে সহায়তা করে? বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+      <div class="stimulus-box">
+       <h4 class="stimulus-title">💡 উদ্দীপক ও সৃজনশীল প্রশ্ন - ৫:</h4>
+       <div class="stimulus-content">
+        <p class="stimulus-text"><strong>উদ্দীপক:</strong> বাংলাদেশ তৈরি পোশাক রপ্তানি করে বৈদেশিক মুদ্রা অর্জন করে। কিন্তু কাঁচামাল, যন্ত্রপাতি ও জ্বালানি আমদানি করতে হয়। সরকার রপ্তানি বাড়ানোর জন্য বিভিন্ন প্রণোদনা দিচ্ছে।</p>
+        <p class="question-text"><strong>ক)</strong> আমদানি কী?</p>
+        <p class="question-text"><strong>খ)</strong> বাংলাদেশের প্রধান রপ্তানি পণ্য কী কী?</p>
+        <p class="question-text"><strong>গ)</strong> উদ্দীপকে বাংলাদেশের বৈদেশিক বাণিজ্যের কোন দিক প্রতিফলিত হয়েছে? ব্যাখ্যা করো।</p>
+        <p class="question-text"><strong>ঘ)</strong> বাংলাদেশের রপ্তানি বৃদ্ধির উপায় ও চ্যালেঞ্জ বিশ্লেষণ করো।</p>
+       </div>
+      </div>
+     </div>
+     <div class="tips-section">
+      <h3 class="tips-title">📚 পরীক্ষার জন্য বিশেষ টিপস</h3>
+      <ul class="tips-list">
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>অধ্যায় ২, ৩ ও ৪ সবচেয়ে গুরুত্বপূর্ণ - এখান থেকে প্রতি বছর বেশি প্রশ্ন আসে</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>জাতীয় আয় পরিমাপের গাণিতিক সমস্যা ভালোভাবে আয়ত্ত করুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>মুদ্রাস্ফীতি, বেকারত্ব, GDP-GNP এর পার্থক্য মুখস্থ রাখুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>বাংলাদেশের অর্থনীতি সম্পর্কিত সাম্প্রতিক তথ্য জানুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>আন্তর্জাতিক সংস্থাগুলোর (WTO, IMF, World Bank) কাজ জানুন</span></li>
+       <li class="tip-item"><span class="tip-icon">✓</span> <span>তুলনামূলক সুবিধা তত্ত্বের গাণিতিক সমস্যা অনুশীলন করুন</span></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+        const defaultConfig = {
+            main_title: "HSC অর্থনীতি সাজেশন",
+            subtitle: "২০২৬ পরীক্ষার্থীদের জন্য বিশেষ প্রস্তুতি",
+            board_name: "ঢাকা বোর্ড",
+            paper_one_title: "অর্থনীতি ১ম পত্র",
+            paper_two_title: "অর্থনীতি ২য় পত্র",
+            background_color: "#0a0e27",
+            primary_color: "#6366f1",
+            text_color: "#e0e6ed",
+            font_family: "Hind Siliguri",
+            font_size: 16
+        };
+
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        function showPaper(paperId) {
+            document.getElementById('navigationView').style.display = 'none';
+            document.getElementById('paper1Content').classList.remove('active');
+            document.getElementById('paper2Content').classList.remove('active');
+            
+            if (paperId === 'paper1') {
+                document.getElementById('paper1Content').classList.add('active');
+            } else {
+                document.getElementById('paper2Content').classList.add('active');
+            }
+        }
+
+        function showNavigation() {
+            document.getElementById('navigationView').style.display = 'grid';
+            document.getElementById('paper1Content').classList.remove('active');
+            document.getElementById('paper2Content').classList.remove('active');
+        }
+
+        async function onConfigChange(config) {
+            const mainTitle = document.getElementById('mainTitle');
+            const subtitle = document.getElementById('subtitle');
+            const boardName = document.getElementById('boardName');
+            const paperOneTitle = document.getElementById('paperOneTitle');
+            const paperTwoTitle = document.getElementById('paperTwoTitle');
+            
+            if (mainTitle) mainTitle.textContent = config.main_title || defaultConfig.main_title;
+            if (subtitle) subtitle.textContent = config.subtitle || defaultConfig.subtitle;
+            if (boardName) boardName.textContent = config.board_name || defaultConfig.board_name;
+            if (paperOneTitle) paperOneTitle.textContent = config.paper_one_title || defaultConfig.paper_one_title;
+            if (paperTwoTitle) paperTwoTitle.textContent = config.paper_two_title || defaultConfig.paper_two_title;
+            
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+            
+            document.body.style.fontFamily = `'${customFont}', sans-serif`;
+            document.querySelector('.main-title').style.fontSize = `${baseSize * 1.875}px`;
+            document.querySelector('.subtitle').style.fontSize = `${baseSize * 0.875}px`;
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.primary_color || defaultConfig.primary_color,
+                            set: (value) => {
+                                config.primary_color = value;
+                                window.elementSdk.setConfig({ primary_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["main_title", config.main_title || defaultConfig.main_title],
+                    ["subtitle", config.subtitle || defaultConfig.subtitle],
+                    ["board_name", config.board_name || defaultConfig.board_name],
+                    ["paper_one_title", config.paper_one_title || defaultConfig.paper_one_title],
+                    ["paper_two_title", config.paper_two_title || defaultConfig.paper_two_title]
+                ])
+            });
+        }
+
+        createStars();
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b4710b3258eba5f',t:'MTc2NjgyMDEzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
